@@ -24,13 +24,16 @@ type slideshow struct {
 }
 
 func Check(filename string) int {
-	f, _ := os.Open(filename)
+	f, err := os.Open(filename)
+	if err != nil {
+		fmt.Println(err)
+	}
 	r := csv.NewReader(f)
 	r.Comma = ' '
 	r.LazyQuotes = true
 	r.FieldsPerRecord = -1
-	_, err := r.Read()
-	if err != nil {
+	_, err2 := r.Read()
+	if err2 != nil {
 		return 1
 	}
 	return 0
@@ -59,9 +62,8 @@ func ensureDir(dirName string) error {
 	err := os.MkdirAll(dirName, os.ModeDir)
 	if err == nil || os.IsExist(err) {
 		return nil
-	} else {
-		return err
 	}
+	return err
 }
 
 func WriteToFile(filename string, data string) error {
@@ -96,7 +98,10 @@ func (s slideshow) presento(w http.ResponseWriter, r *http.Request) {
 func start(w http.ResponseWriter, r *http.Request) {
 	//fmt.Println("method:", r.Method) //get request method
 	listy := []string{}
-	file, _ := os.Open("slideshow.txt")
+	file, err := os.Open("slideshow.txt")
+	if err != nil {
+		fmt.Println(err)
+	}
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		listy = append(listy, scanner.Text())
@@ -125,7 +130,10 @@ Stage1:
 			x++
 		case "TXT":
 			tobeopened := strings.Join(s[1:], "")
-			file2, _ := os.Open(tobeopened)
+			file2, err := os.Open(tobeopened)
+			if err != nil {
+				fmt.Println(err)
+			}
 			scanner := bufio.NewScanner(file2)
 			for scanner.Scan() {
 				S.Code += scanner.Text() + "\n"

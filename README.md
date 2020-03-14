@@ -1,8 +1,8 @@
-# slideshow\
-a slideshow webapp using simple markdown\
+# slideshow
+a slideshow webapp using simple markdown
 
-1) First create a text file called 'slideshow' in the same folder as this app.\
-2) Follow these markdown instructions:\
+1) First create a text file called 'slideshow' in the same folder as this app. \
+2) Follow these markdown instructions: \
 
 The first item indicates what the row should be, delimited by an underscore.
 S = the title of the slideshow\

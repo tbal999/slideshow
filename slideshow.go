@@ -204,6 +204,8 @@ p {
 		log.Fatal(filerrorA)
 	}
 	http.HandleFunc("/", start)
+	fmt.Println("Loading default browser...")
+	fmt.Println("Just press CTRL-C to exit when you have finished")
 	openbrowser("http://127.0.0.1:9090")
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("./"))))
 	err2 := http.ListenAndServe(":9090", nil) // setting listening port

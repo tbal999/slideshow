@@ -123,7 +123,7 @@ Stage1:
 		case "IMG":
 			S.Image = strings.Join(s[1:], "")
 			x++
-		case "code":
+		case "TXT":
 			tobeopened := strings.Join(s[1:], "")
 			file2, _ := os.Open(tobeopened)
 			scanner := bufio.NewScanner(file2)

@@ -1,5 +1,5 @@
 # slideshow
-a (verticle scrolling) slideshow webapp using simple markdown
+a (vertically scrolling) slideshow webapp using simple markdown
 
 1) First create a text file called 'slideshow' in the same folder as this app. 
 2) Follow these markdown instructions: 

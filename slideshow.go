@@ -140,7 +140,7 @@ Stage1:
 			}
 			x++
 		case "E":
-			S.Title = "Q & A"
+			S.Title = strings.Join(s[1:], "")
 			S.presento(w, r)
 			x++
 		}

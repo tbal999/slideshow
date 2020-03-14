@@ -1,19 +1,19 @@
 S_Title Of The Slideshow
-**_This is the first slide
-***_Here's some subheadings
-***_Building a presentation app sounded like a fun idea
-***_So here it is!
+*_This is the first slide
+**_Here's some subheadings
+**_Building a presentation app sounded like a fun idea
+**_So here it is!
 -
-**_This is the second slide.
-***_Here's some stuff underneath it
-***_Here is some more stuff
+*_This is the second slide.
+**_Here's some stuff underneath it
+**_Here is some more stuff
 -
-**_This is the third slide
+*_This is the third slide
 IMG_add_an_image_here.gif
-***_I hope that this was interesting
-***_There's one more slide
+**_I hope that this was interesting
+**_There's one more slide
 -
-**_Time to present some text:
+*_Time to present some text:
 TXT_atextfile.txt
 -
 E_Q&A

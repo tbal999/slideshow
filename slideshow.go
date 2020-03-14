@@ -115,10 +115,10 @@ Stage1:
 		case "S":
 			S.Title = strings.Join(s[1:], " ")
 			x++
-		case "**":
+		case "*":
 			S.Header = strings.Join(s[1:], " ")
 			x++
-		case "***":
+		case "**":
 			S.Subheader = append(S.Subheader, strings.Join(s[1:], ""))
 			x++
 		case "-":
